@@ -1,0 +1,8 @@
+version: '2.4'
+services:
+  web:
+    build:
+      context: .
+    image: olkitu/nginx-php-fpm
+    ports:
+    - 80:80
