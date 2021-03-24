@@ -1,11 +1,11 @@
-name: CI
+name: Build Docker Image and Push to DockerHub
 on:
   push:
     branches:
       - 'main'
 
 jobs:
-  docker:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Set up QEMU
@@ -34,7 +34,7 @@ jobs:
         build-args: |
           PHP_VERSION=7.4
           ALPINE_VERSION=3.13
-        tags: olkitu/docker-nginx-php-fpm:latest,olkitu/docker-nginx-php-fpm:7.4
+        tags: olkitu/docker-nginx-php-fpm:7.4
 
     - name: Build Latest
       uses: docker/build-push-action@v2
@@ -43,12 +43,4 @@ jobs:
         build-args: |
           PHP_VERSION=8
           ALPINE_VERSION=3.13
-        tags: olkitu/docker-nginx-php-fpm:latest,olkitu/docker-nginx-php-fpm:8
-
-    - uses: actions/checkout@v2
-    - name: Update repo description
-      uses: peter-evans/dockerhub-description@v2
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
-        repository: olkitu/docker-nginx-php-fpm
+        tags: olkitu/docker-nginx-php-fpm:8,olkitu/docker-nginx-php-fpm:latest
