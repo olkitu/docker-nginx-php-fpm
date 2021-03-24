@@ -13,9 +13,13 @@ Based Official php:fpm-alpine image: https://hub.docker.com/_/php with additiona
 
 ## Usage
 
+Just easily run latest version
+
 ```
 docker run olkitu/docker-nginx-php-fpm
 ```
+
+If you like use different version, specify it in Tags.
 
 Browse to http://localhost and you should see phpinfo page.
 
