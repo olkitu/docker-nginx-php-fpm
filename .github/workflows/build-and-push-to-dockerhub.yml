@@ -34,7 +34,7 @@ jobs:
         build-args: |
           PHP_VERSION=7.4
           ALPINE_VERSION=3.13
-        tags: olkitu/docker-nginx-php-fpm:7.4
+        tags: olkitu/docker-nginx-php-fpm:7.4,olkitu/docker-nginx-php-fpm:7
 
     - name: Build Latest
       uses: docker/build-push-action@v2

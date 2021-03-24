@@ -5,7 +5,7 @@ Based Official php:fpm-alpine image: https://hub.docker.com/_/php with additiona
 * Nginx
 * Supervisor
 
-## Supported versions
+## Supported PHP versions
 
 * 8
 * 7.4
@@ -13,17 +13,19 @@ Based Official php:fpm-alpine image: https://hub.docker.com/_/php with additiona
 
 ## Usage
 
-Just easily run latest version
+Run latest version
 
 ```
-docker run olkitu/docker-nginx-php-fpm
+docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d olkitu/docker-nginx-php-fpm
 ```
 
-If you like use different version, specify it in Tags.
+Run specific version, example 7.4
 
-Browse to http://localhost and you should see phpinfo page.
+```
+docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d olkitu/docker-nginx-php-fpm:7.4
+```
 
-To install additional PHP-modules like pdo_mysql, use instructions from Official image: https://hub.docker.com/_/php
+It's recommended create `Dockerfile` and build own custom image. You can install to custom image also additional PHP-modules like pdo_mysql. 
 
 ## Source
 
