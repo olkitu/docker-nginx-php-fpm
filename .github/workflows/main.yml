@@ -42,7 +42,7 @@ jobs:
         push: true
         build-args: |
           PHP_VERSION=8
-          ALPINE_VERSION=''
+          ALPINE_VERSION=3.13
         tags: olkitu/docker-nginx-php-fpm:latest,olkitu/docker-nginx-php-fpm:8
 
     - name: Update repo description
