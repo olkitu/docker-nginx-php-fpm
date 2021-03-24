@@ -22,19 +22,32 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        build-args: PHP_VERSION=7.3,ALPINE_VERSION=3.13
+        build-args:
+        - PHP_VERSION: 7.3
+        - ALPINE_VERSION: 3.13
         tags: olkitu/docker-nginx-php-fpm:7.3
 
     - name: Build 7.4
       uses: docker/build-push-action@v2
       with:
         push: true
-        build-args: PHP_VERSION=7.4,ALPINE_VERSION=3.13
+        build-args:
+        - PHP_VERSION: 7.4
+        - ALPINE_VERSION: 3.13
         tags: olkitu/docker-nginx-php-fpm:latest,olkitu/docker-nginx-php-fpm:7.4
 
     - name: Build Latest
       uses: docker/build-push-action@v2
       with:
         push: true
-        build-args: PHP_VERSION=8,ALPINE_VERSION=
+        build-args:
+        - PHP_VERSION: 8
+        - ALPINE_VERSION: ''
         tags: olkitu/docker-nginx-php-fpm:latest,olkitu/docker-nginx-php-fpm:8
+
+    - name: Update repo description
+      uses: peter-evans/dockerhub-description@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        repository: olkitu/docker-nginx-php-fpm
