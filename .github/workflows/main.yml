@@ -45,6 +45,7 @@ jobs:
           ALPINE_VERSION=3.13
         tags: olkitu/docker-nginx-php-fpm:latest,olkitu/docker-nginx-php-fpm:8
 
+    - uses: actions/checkout@v2
     - name: Update repo description
       uses: peter-evans/dockerhub-description@v2
       with:

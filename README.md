@@ -20,3 +20,7 @@ docker run olkitu/docker-nginx-php-fpm
 Browse to http://localhost and you should see phpinfo page.
 
 To install additional PHP-modules like pdo_mysql, use instructions from Official image: https://hub.docker.com/_/php
+
+## Source
+
+Source: https://github.com/olkitu/docker-nginx-php-fpm
