@@ -27,6 +27,7 @@ jobs:
         build-args: |
           PHP_VERSION=7.3
           ALPINE_VERSION=3.13
+        platforms: linux/amd64,linux/386,linux/arm/v6,linux/arm/v7,linux/arm64/v8
         tags: olkitu/docker-nginx-php-fpm:7.3
 
     - name: Build 7.4
@@ -36,6 +37,7 @@ jobs:
         build-args: |
           PHP_VERSION=7.4
           ALPINE_VERSION=3.13
+        platforms: linux/amd64,linux/386,linux/arm/v6,linux/arm/v7,linux/arm64/v8
         tags: olkitu/docker-nginx-php-fpm:7.4,olkitu/docker-nginx-php-fpm:7
 
     - name: Build Latest
@@ -45,4 +47,5 @@ jobs:
         build-args: |
           PHP_VERSION=8
           ALPINE_VERSION=3.13
+        platforms: linux/amd64,linux/386,linux/arm/v6,linux/arm/v7,linux/arm64/v8
         tags: olkitu/docker-nginx-php-fpm:8,olkitu/docker-nginx-php-fpm:latest

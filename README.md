@@ -11,6 +11,8 @@ Based Official php:fpm-alpine image: https://hub.docker.com/_/php with additiona
 * 7.4
 * 7.3
 
+Check from Tags all supported versions and architechtures.
+
 ## Usage
 
 Run latest version
