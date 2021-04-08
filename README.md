@@ -17,7 +17,7 @@ Alpine:
 
 Debian Buster:
 
-* 8: `8.0-buster`, `8-buster`, `buster-latest`
+* 8: `8.0-buster`, `8-buster`, `latest-buster`
 * 7.4: `7.4-buster`, `7-buster`
 * 7.3: `7.3-buster`
 
