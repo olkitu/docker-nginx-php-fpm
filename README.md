@@ -1,15 +1,25 @@
 # Docker Nginx & PHP-FPM with Supervisor
 
-Based Official php:fpm-alpine image: https://hub.docker.com/_/php with additional packages
+Based Official PHP image: https://hub.docker.com/_/php with additional packages:
 
 * Nginx
 * Supervisor
 
+This repository will automatically update weekly.
+
 ## Supported PHP versions
 
-* 8
-* 7.4
-* 7.3
+Alpine:
+
+* 8: `8.0`, `8`, `latest`
+* 7.4: `7.4`, `7`
+* 7.3: `7.3`
+
+Debian Buster:
+
+* 8: `8.0-buster`, `8-buster`, `buster-latest`
+* 7.4: `7.4-buster`, `7-buster`
+* 7.3: `7.3-buster`
 
 Check from Tags all supported versions and architechtures.
 
