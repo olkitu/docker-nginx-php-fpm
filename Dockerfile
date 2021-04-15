@@ -8,9 +8,7 @@ RUN apk add --no-cache nginx supervisor \
     && mkdir /run/nginx/ \
     && rm -rf /var/log/nginx/access.log /var/log/nginx/error.log \
     && ln -sf /dev/stdout /var/log/nginx/access.log \
-    && ln -sf /dev/stderr /var/log/nginx/error.log \
-    && cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
-    && sed -i -e 's/expose_php = On/expose_php = Off/' /usr/local/etc/php/php.ini
+    && ln -sf /dev/stderr /var/log/nginx/error.log
 
 # Copy configurations
 COPY configs/supervisor.conf /etc/supervisor/conf.d/supervisord.conf
