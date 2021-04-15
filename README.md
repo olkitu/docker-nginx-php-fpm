@@ -37,11 +37,9 @@ Run specific version, example 7.4
 docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d olkitu/docker-nginx-php-fpm:7.4
 ```
 
-It's recommended create `Dockerfile` and build own custom image. You can install to custom image also additional PHP-modules like pdo_mysql. 
-
 ## Production image
 
-To run in production, use production `php.ini` configuration and hide PHP-version.
+To build image to production create `Dockerfile` to specify your own configuration. 
 
 ```Dockerfile
 # Use olkitu/docker-nginx-php-fpm image

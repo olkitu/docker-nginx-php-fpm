@@ -3,6 +3,13 @@ on:
   push:
     branches:
       - 'main'
+    paths:
+      - Dockerfile
+      - Dockerfile.debian
+      - docker-entrypoint.sh
+      - .dockerignore
+      - configs/**
+      - .github/workflows/**
   schedule:
   - cron: '0 0 */7 * *'
 
