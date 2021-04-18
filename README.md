@@ -56,7 +56,7 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
 
 ## License
 
-[MTM](https://github.com/olkitu/docker-nginx-php-fpm/blob/main/LICENSE)
+[MIT](https://github.com/olkitu/docker-nginx-php-fpm/blob/main/LICENSE)
 
 ## Source
 
