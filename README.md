@@ -1,5 +1,7 @@
 # Docker Nginx & PHP-FPM with Supervisor
 
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/olkitu/docker-nginx-php-fpm/Build%20and%20Push%20to%20DockerHub/main) ![Docker Pulls](https://img.shields.io/docker/pulls/olkitu/docker-nginx-php-fpm)
+
 Based Official PHP image: https://hub.docker.com/_/php with additional packages:
 
 * Nginx
