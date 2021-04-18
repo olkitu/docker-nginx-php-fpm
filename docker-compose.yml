@@ -3,6 +3,6 @@ services:
   web:
     build:
       context: .
-    image: olkitu/docker-nginx-php-fpm
+#      dockerfile: Dockerfile.debian
     ports:
     - 80:80
