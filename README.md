@@ -1,6 +1,6 @@
 # Docker Nginx & PHP-FPM with Supervisor
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/olkitu/docker-nginx-php-fpm/Build%20and%20Push%20to%20DockerHub/main) ![Docker Pulls](https://img.shields.io/docker/pulls/olkitu/docker-nginx-php-fpm)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/olkitu/docker-nginx-php-fpm/Build%20and%20Push%20to%20DockerHub/main) ![Docker Pulls](https://img.shields.io/docker/pulls/olkitu/docker-nginx-php-fpm) ![GitHub](https://img.shields.io/github/license/olkitu/docker-nginx-php-fpm)
 
 Based Official PHP image: https://hub.docker.com/_/php with additional packages:
 
@@ -53,6 +53,10 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
 
 # Do other changes like copy website files to image with COPY: https://docs.docker.com/engine/reference/builder/#copy
 ```
+
+## License
+
+[MTM](https://github.com/olkitu/docker-nginx-php-fpm/blob/main/LICENSE)
 
 ## Source
 
