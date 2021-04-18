@@ -6,6 +6,7 @@ Based Official PHP image: https://hub.docker.com/_/php with additional packages:
 
 * Nginx
 * Supervisor
+* [renatomefi/php-fpm-healthcheck](https://github.com/renatomefi/php-fpm-healthcheck)
 
 This repository will automatically update weekly.
 
