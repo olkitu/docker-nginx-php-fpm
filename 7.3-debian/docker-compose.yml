@@ -3,6 +3,5 @@ services:
   web:
     build:
       context: .
-#      dockerfile: Dockerfile.debian
     ports:
     - 80:80

@@ -1,6 +1,6 @@
 # Docker Nginx & PHP-FPM with Supervisor
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/olkitu/docker-nginx-php-fpm/Build%20and%20Push%20to%20DockerHub/main) ![Docker Pulls](https://img.shields.io/docker/pulls/olkitu/docker-nginx-php-fpm) ![GitHub](https://img.shields.io/github/license/olkitu/docker-nginx-php-fpm)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/olkitu/docker-nginx-php-fpm/Build%20and%20Push%20to%20DockerHub/main) ![GitHub](https://img.shields.io/github/license/olkitu/docker-nginx-php-fpm)
 
 Based Official PHP image: https://hub.docker.com/_/php with additional packages:
 
@@ -31,13 +31,13 @@ Check from Tags all supported versions and architechtures.
 Run latest version
 
 ```
-docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d olkitu/docker-nginx-php-fpm
+docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d ghcr.io/olkitu/olkitu/docker-nginx-php-fpm
 ```
 
 Run specific version, example 7.4
 
 ```
-docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d olkitu/docker-nginx-php-fpm:7.4
+docker run --name nginx-php-fpm -v /some/content:/var/www/html:ro -d ghcr.io/olkitu/docker-nginx-php-fpm:7.4
 ```
 
 ## Production image
@@ -46,7 +46,7 @@ To build image to production create `Dockerfile` to specify your own configurati
 
 ```Dockerfile
 # Use olkitu/docker-nginx-php-fpm image
-FROM olkitu/docker-nginx-php-fpm:7.4
+FROM ghcr.io/olkitu/docker-nginx-php-fpm:7.4
 
 # Use production php.ini configuration and hide PHP-version
 RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
