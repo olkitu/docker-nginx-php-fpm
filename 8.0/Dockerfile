@@ -5,7 +5,7 @@ ENV PHP_FPM_HEALTHCHECK_COMMIT 078ab63599a031c3995bedf7623cb7d5495f3f56
 # Install Nginx
 RUN BUILD_PACKAGES='git' \
     && apk add --no-cache nginx supervisor curl fcgi $BUILD_PACKAGES \
-    && mkdir /run/nginx/ \
+    && mkdir -p /run/nginx/ \
     && rm -rf /var/log/nginx/access.log /var/log/nginx/error.log \
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log \
